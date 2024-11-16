@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UFC</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Font Awesome para iconos (opcional) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+
+    <style>
+     .card {
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px); 
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); 
+    }
+
+   
+    .card-img-top {
+      object-fit: cover;
+      height: 200px;
+      transition: opacity 0.4s #dbdee1;
+    }
+
+    .card-body {
+      background-color: #dbdee1;
+      padding: 20px;
+      position: relative;
+      height: 240px;
+    }
+
+    .card:hover .card-img-top {
+      opacity: 0.7;
+    }
+
+    .card-title {
+      font-size: 1.25rem;
+      color: #333;
+      font-weight: bold;
+    }
+
+    /* Estilo base del botón */
+    .btn-primary {
+      position: relative;
+      color: #007bff; 
+      background-color: transparent; 
+      border: 2px solid #007bff; 
+      font-weight: bold;
+      text-transform: uppercase;
+      width: 150px;
+      height: 45px;
+      text-align:center;
+      padding: 12px 30px;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+      overflow: hidden;
+    }
+
+    .btn-primary::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: #323335;
+      transition: width 0.4s ease;
+    }
+
+    
+    .card-body .btn-primary {
+    display: block;   /* Hace que el botón se trate como un bloque */
+   margin-left: 0;   /* Alinea el botón a la izquierda */
+  }
+    </style>
+</head>
+<body>
+  <nav class="navbar navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      
+      <a class="navbar-brand fs-5 fw-bold" href="index.html" >Inicio</a>
+  
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      
+      <div class="offcanvas offcanvas-end bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+        <div class="offcanvas-header">
+          
+          <h4 class="offcanvas-title text-center w-100 text-white" id="offcanvasDarkNavbarLabel">Festival de Frecuencias</h4>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+  
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+            
+            <li class="nav-item mb-4">
+              <h5 class="text-center text-info fw-bold">Eventos musicales</h5>
+              <a class="nav-link active text-center text-light" href="conciertos.html">Frecuencias contigo</a>
+            </li>
+            
+            <li class="nav-item mb-4">
+              <h5 class="text-center text-info fw-bold">Eventos deportivos</h5>
+              <a class="nav-link text-center text-light" href="basquet.html">Basquetball</a>
+              <a class="nav-link text-center text-light" href="futbol.html">Fútbol</a>
+              <a class="nav-link text-center text-light" href="ufc.html">UFC</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="container my-5"><br>
+    <h1 class="text-center">UFC</h1><br>
+    <div>
+      <img src="img/ufc.png"style="width: 1110px;" alt="">
+    </div><br><br>
+
+      <div class="container my-5">
+        
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+           
+            <!-- Card 1 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://imgmedia.libero.pe/652x365/libero/original/2023/03/17/6414e630a54b6c5908013849.webp" class="card-img-top" alt="Imagen 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Edwards vs Usman 3</h5>
+                        <p class="card-text">4 de enero 2025
+                            <br>O2 Arena (ENG) Londres
+                            <br>6 : 00 PM
+                        </p>
+                        <a href="pago.html" class="btn btn-primary">$390.000</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://preview.redd.it/ezvjuswj03vd1.jpeg?width=640&crop=smart&auto=webp&s=bbbbb7b84fe6d65291a2d2311da0602f8bef9462" class="card-img-top" alt="Imagen 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Ilia Topuria vs Max Holloway</h5>
+                        <p class="card-text">25 de Diciembre 2024
+                            <br>Etihad Arena de Abu Dabi 
+                            <br>2: 00 PM </p>
+                        <a href="pago.html" class="btn btn-primary">$400.000</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://fotografias.lasexta.com/clipping/cmsimages01/2021/04/15/053B185A-A0A8-4840-A18B-346170438416/60.jpg?crop=4031,2267,x0,y0&width=640&height=360&optimize=medium&format=webply" class="card-img-top" alt="Imagen 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Conor McGregor VS Dustin Poirier</h5>
+                        <p class="card-text">10 de Septiembre 2025
+                            <br>T-Mobile de Las Vegas
+                            <br>2 : 50 PM </p>
+                        <a href="pago.html" class="btn btn-primary">$280.000</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://www.diez.hn/binrepository/1200x738/0c0/0d0/none/3014757/WWAB/webUFC.2_DZ935339_MG92107109.jpg" class="card-img-top" alt="Imagen 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Silva VS Bisping</h5>
+                        <p class="card-text">19 de Agosto 2025
+                            <br> Londres, Inglaterra
+                            <br>5 : 00 PM </p>
+                        <a href="pago.html" class="btn btn-primary">$320.000</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 5 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://img.asmedia.epimg.net/resizer/v2/ADOHGER67RHMNCRD6A3RDJVLLA.JPG?auth=2cba2dc8fe4d0565acea6e70a2e07d88baad6fb577cbba20f9e3f04d38288f89&width=360&height=203&smart=true" class="card-img-top" alt="Imagen 5">
+                    <div class="card-body">
+                        <h5 class="card-title">Mikel Fernández VS Franco </h5>
+                        <p class="card-text">30 de Marzo 2025
+                            <br>Tailandia
+                            <br>4 : 20 PM </p>
+                        <a href="pago.html" class="btn btn-primary">$180.000</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 6 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://www.diez.hn/binrepository/1200x797/0c0/0d0/none/3014757/QSMK/chelsea-vs-celtic-web-dz_8118190_20240727102109.jpg" class="card-img-top" alt="Imagen 6">
+                    <div class="card-body">
+                        <h5 class="card-title">Celtic vs Chelsea</h5>
+                        <p class="card-text">19 de Febrero 2025
+                            <br>Estadio Celtic Park
+                            <br>7 : 10 PM </p>
+                        <a href="pago.html" class="btn btn-primary">$420.000</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 7 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://external-preview.redd.it/daniel-cormiers-top-three-ufc-fights-of-2023-with-instant-v0-VfCHI1x4MY98JZgLmEMqefymXGHFxXHDK4JnkGdd3k0.jpg?auto=webp&s=d798a0d67a6b11c28fec9cbeaf277942ec5c4c57" class="card-img-top" alt="Imagen 7">
+                    <div class="card-body">
+                        <h5 class="card-title"> Daniel Cormier VS Frid</h5>
+                      
+                            <p class="card-text">20 de Abril 2025
+                                <br>EE.UU
+                                <br>7 : 20 PM </p>
+                        <a href="pago.html" class="btn btn-primary">$250.000</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 8 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://images.ecestaticos.com/sgZJdraNzwmjSCdOzmCgdbBSsKU=/30x180:2271x1355/600x315/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2F02b%2F04b%2F83a%2F02b04b83aa08c8f76246cbd69b08ece0.jpg" class="card-img-top" alt="Imagen 8">
+                    <div class="card-body">
+                        <h5 class="card-title">Conor McGregor VS</h5>
+                        <p class="card-text">10 de Abril 2025
+                            <br>Las vegas
+                            <br>10 : 40 PM </p>
+                        <a href="pago.html" class="btn btn-primary">$310.999</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+  <footer class="bg-dark text-white pt-5 pb-4">
+    <div class="container text-center text-md-start">
+        <div class="row">
+
+            
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                <h6 class="text-uppercase fw-bold">Festival de Frecuencias</h6>
+                <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px"/>
+                <p>
+                    Ofrecemos las mejores vivencias sonoras que podrias experimentar en tu vida
+                </p>
+            </div>
+
+            <!-- Enlaces útiles -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                <h6 class="text-uppercase fw-bold">En nuestra página</h6>
+                <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px"/>
+                <p><a href="index.html" class="text-white text-decoration-none">Inicio</a></p>
+                <p><a href="#" class="text-white text-decoration-none">Eventos</a></p>
+                <p><a href="iniciarsesion.html" class="text-white text-decoration-none">Iniciar sesión</a></p>
+                <p><a href="#" class="text-white text-decoration-none">Contacto</a></p>
+            </div>
+
+            <!-- Contacto -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                <h6 class="text-uppercase fw-bold">Contacto</h6>
+                <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px"/>
+                <p><i class="fas fa-home mr-3"></i> Rio negro, Colombia</p>
+                <p><i class="fas fa-envelope mr-3"></i> Festivalfrecuencias@gmail.com</p>
+                <p><i class="fas fa-phone mr-3"></i> 314 8113864</p>
+                <p><i class="fas fa-print mr-3"></i> 311 3485801</p>
+            </div>
+
+            <!-- Redes Sociales -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                <h6 class="text-uppercase fw-bold">Síguenos</h6>
+                <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px"/>
+                <div>
+                    <a href="" class="text-white me-4"><i class="fab fa-facebook-f"></i>Instagram</a>
+                    <a href="#" class="text-white me-4"><i class="fab fa-twitter"></i>Faceebook</a>
+                    <a href="#" class="text-white me-4"><i class="fab fa-instagram"></i>Twitter</a>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2024 Festival de Frecuencias | Todos los derechos reservados.
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Bootstrap 5 JS y Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>

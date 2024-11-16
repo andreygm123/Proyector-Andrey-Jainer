@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conciertos</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+
+    <style>
+        .card {
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px); 
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); 
+    }
+
+   
+    .card-img-top {
+      object-fit: cover;
+      height: 200px;
+      transition: opacity 0.4s #dbdee1;
+    }
+
+    .card-body {
+      background-color: #dbdee1;
+      padding: 20px;
+      position: relative;
+      height: 240px;
+    }
+
+    .card:hover .card-img-top {
+      opacity: 0.7;
+    }
+
+    .card-title {
+      font-size: 1.25rem;
+      color: #333;
+      font-weight: bold;
+    }
+
+    
+    
+    /* Estilo base del botón */
+
+    
+    .btn-primary {
+      position: relative;
+      color: #007bff; 
+      background-color: transparent; 
+      border: 2px solid #007bff; 
+      font-weight: bold;
+      text-transform: uppercase;
+      width: 150px;
+      height: 45px;
+      text-align:center;
+      padding: 12px 30px;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+      overflow: hidden;
+    }
+
+    .btn-primary::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: #323335;
+      transition: width 0.4s ease;
+    }
+
+    
+    .card-body .btn-primary {
+  display: block;   /* Hace que el botón se trate como un bloque */
+  margin-left: 0;   /* Alinea el botón a la izquierda */
+}
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+          <a href="index.html" class="navbar-brand"   data-bs-target="#loginModal">Inicio</a>
+          
+          
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Festival de Frecuencias</h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+      
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                
+                <li class="nav-item mb-4">
+                  <h5 class="text-center text-info fw-bold">Eventos musicales</h5>
+                  <a class="nav-link active text-center text-light" href="conciertos.html">Frecuencias contigo</a>
+                </li>
+                
+                <li class="nav-item mb-4">
+                  <h5 class="text-center text-info fw-bold">Eventos deportivos</h5>
+                  <a class="nav-link text-center text-light" href="basquet.html">Basquetball</a>
+                  <a class="nav-link text-center text-light" href="futbol.html">Fútbol</a>
+                  <a class="nav-link text-center text-light" href="ufc.html">UFC</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      
+      <div class="container my-5"><br>
+        <h1 class="text-center">Conciertos</h1><br>
+        <div>
+          <img src="img/conciertos.png" style="width: 1110px;" alt="">
+        </div><br><br>
+    <div class="container my-5">
+        <h1>Conciertos</h1>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+           
+            <!-- Card 1 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://cdn.bitlysdowssl-aws.com/wp-content/uploads/2023/07/1d95cadf900658726f5e89e518acbd55a71d3b44.jpg" class="card-img-top" alt="Imagen 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Medellin</h5>
+                        <p class="card-text">8 de enero 2025
+                            <br>Estadio Estadio Atanacio
+                            <br>6 : 00 PM
+                        </p>
+                        <a href="pago.html" class="btn btn-primary">$310.000</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://caracoltv.brightspotcdn.com/dims4/default/b141a61/2147483647/strip/false/crop/6000x4570+0+0/resize/1200x914!/format/webp/quality/90/?url=http%3A%2F%2Fcaracol-brightspot.s3.us-west-2.amazonaws.com%2F8c%2Fe5%2F6b7fe1544183b38470f45ac952cf%2Fryan-castro-2.jpg" class="card-img-top" alt="Imagen 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Rian Castro</h5>
+                        <p class="card-text">25 de Abril 2025
+                            <br>Mexico
+                            <br>5 : 00 PM </p>
+                        <a href="pago.html" class="btn btn-primary">$200.000</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://estaticos.elcolombiano.com/binrepository/780x565/0c0/780d565/none/11101/EWCR/karolgconciertogetty-43178783-20230831151646_43357885_20230925073716.jpg" class="card-img-top" alt="Imagen 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Karol G</h5>
+                        <p class="card-text">1 de Noviembre 2025
+                            <br>España
+                            <br>7 : 00 PM </p>
+                        <a href="pago.html" class="btn btn-primary">$326.200</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://cloudfront-us-east-1.images.arcpublishing.com/prisaradioco/VKCHORYJBVABBFF6TMKVDBBGJY.jpg" class="card-img-top" alt="Imagen 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Andres Sepeda</h5>
+                        <p class="card-text">1 de Febrero 2025
+                            <br>Manizales
+                            <br>9 : 00 PM </p>
+                        <a href="pago.html" class="btn btn-primary">$502.000</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 5 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://www.fmdos.cl/wp-content/uploads/2021/05/7-cantantes-que-huyeron-del-escenario-en-pleno-concierto.jpeg" class="card-img-top" alt="Imagen 5">
+                    <div class="card-body">
+                        <h5 class="card-title">  Bili eis</h5>
+                        <p class="card-text">18 de Marzo 2025
+                            <br>EE:UU
+                            <br>8 : 20 PM </p>
+                        <a href="pago.html" class="btn btn-primary">$542.100</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 6 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://www.tn8.tv/wp-content/uploads/2024/04/2-596.jpg " class="card-img-top" alt="Imagen 6">
+                    <div class="card-body">
+                        <h5 class="card-title">Shakira</h5>
+                        <p class="card-text">11 de Agosto 2025
+                            <br>Belgica
+                            <br>9 : 20 PM </p>
+                        <a href="pago.html" class="btn btn-primary">$550.101</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 7 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRodIgITqbhp5_WNN8UASX7MCKXO9NB5Zz0GA&s" class="card-img-top" alt="Imagen 7">
+                    <div class="card-body">
+                        <h5 class="card-title">Bad Buny </h5>
+                        
+                            <p class="card-text">20 de Julio 2025
+                                <br>California
+                                <br>10 : 40 PM </p>
+                        <a href="pago.html" class="btn btn-primary">$433.333</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 8 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://www.radioactiva.cl/wp-content/uploads/2024/09/Anuel-AA-en-Chile-jpg.webp" class="card-img-top" alt="Imagen 8">
+                    <div class="card-body">
+                        <h5 class="card-title">Anuel</h5>
+                        <p class="card-text">28 de Agosto 2025
+                            <br>España 
+                            <br>8 : 10 PM </p>
+                        <a href="pago.html" class="btn btn-primary">$350.200</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <footer class="bg-dark text-white pt-5 pb-4">
+      <div class="container text-center text-md-start">
+          <div class="row">
+  
+              
+              <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                  <h6 class="text-uppercase fw-bold">Festival de Frecuencias</h6>
+                  <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px"/>
+                  <p>
+                      Ofrecemos las mejores vivencias sonoras que podrias experimentar en tu vida
+                  </p>
+              </div>
+  
+              <!-- Enlaces útiles -->
+              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                  <h6 class="text-uppercase fw-bold">En nuestra página</h6>
+                  <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px"/>
+                  <p><a href="index.html" class="text-white text-decoration-none">Inicio</a></p>
+                  <p><a href="#" class="text-white text-decoration-none">Eventos</a></p>
+                  <p><a href="iniciarsesion.html" class="text-white text-decoration-none">Iniciar sesión</a></p>
+                  <p><a href="#" class="text-white text-decoration-none">Contacto</a></p>
+              </div>
+  
+              <!-- Contacto -->
+              <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                  <h6 class="text-uppercase fw-bold">Contacto</h6>
+                  <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px"/>
+                  <p><i class="fas fa-home mr-3"></i> Rio negro, Colombia</p>
+                  <p><i class="fas fa-envelope mr-3"></i> Festivalfrecuencias@gmail.com</p>
+                  <p><i class="fas fa-phone mr-3"></i> 314 8113864</p>
+                  <p><i class="fas fa-print mr-3"></i> 311 3485801</p>
+              </div>
+  
+              <!-- Redes Sociales -->
+              <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                  <h6 class="text-uppercase fw-bold">Síguenos</h6>
+                  <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px"/>
+                  <div>
+                      <a href="" class="text-white me-4"><i class="fab fa-facebook-f"></i>Instagram</a>
+                      <a href="#" class="text-white me-4"><i class="fab fa-twitter"></i>Faceebook</a>
+                      <a href="#" class="text-white me-4"><i class="fab fa-instagram"></i>Twitter</a>
+
+                  </div>
+              </div>
+  
+          </div>
+      </div>
+  
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          © 2024 Festival de Frecuencias | Todos los derechos reservados.
+      </div>
+  </footer>
+
+
+
+
+
+    <!-- Bootstrap 5 JS y Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>

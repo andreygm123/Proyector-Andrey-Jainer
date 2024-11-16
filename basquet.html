@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basquet</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Font Awesome para iconos (opcional) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+
+    <style>
+   .card {
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px); 
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); 
+    }
+
+   
+    .card-img-top {
+      object-fit: cover;
+      height: 200px;
+      transition: opacity 0.4s #dbdee1;
+    }
+
+    .card-body {
+      background-color: #dbdee1;
+      padding: 20px;
+      position: relative;
+      height: 240px;
+    }
+
+    .card:hover .card-img-top {
+      opacity: 0.7;
+    }
+
+    .card-title {
+      font-size: 1.25rem;
+      color: #333;
+      font-weight: bold;
+    }
+
+    /* Estilo base del botón */
+    .btn-primary {
+      position: relative;
+      color: #007bff; 
+      background-color: transparent; 
+      border: 2px solid #007bff; 
+      font-weight: bold;
+      text-transform: uppercase;
+      width: 150px;
+      height: 45px;
+      text-align:center;
+      padding: 12px 30px;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+      overflow: hidden;
+    }
+
+    .btn-primary::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: #323335;
+      transition: width 0.4s ease;
+    }
+
+    
+    .card-body .btn-primary {
+    display: block;   /* Hace que el botón se trate como un bloque */
+    margin-left: 0;   /* Alinea el botón a la izquierda */
+    }
+    </style>
+</head>
+<body>
+  <nav class="navbar navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      
+      <a class="navbar-brand fs-5 fw-bold" href="index.html" >Inicio</a>
+  
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      
+      <div class="offcanvas offcanvas-end bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+        <div class="offcanvas-header">
+          
+          <h4 class="offcanvas-title text-center w-100 text-white" id="offcanvasDarkNavbarLabel">Festival de Frecuencias</h4>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+  
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+            
+            <li class="nav-item mb-4">
+              <h5 class="text-center text-info fw-bold">Eventos musicales</h5>
+              <a class="nav-link active text-center text-light" href="conciertos.html">Frecuencias contigo</a>
+            </li>
+            
+            <li class="nav-item mb-4">
+              <h5 class="text-center text-info fw-bold">Eventos deportivos</h5>
+              <a class="nav-link text-center text-light" href="basquet.html">Basquetball</a>
+              <a class="nav-link text-center text-light" href="futbol.html">Fútbol</a>
+              <a class="nav-link text-center text-light" href="ufc.html">UFC</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+    <div class="container my-5"><br>
+      <h1 class="text-center">Basquet</h1><br>
+      <div>
+        <img src="img/basquet.png"style="width: 1110px;" alt="">
+      </div><br><br>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+           
+            <!-- Card 1 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://img.olympics.com/images/image/private/t_s_16_9_g_auto/t_s_w960/f_auto/primary/ey7cmsgntqznp8g1dtgv" class="card-img-top" alt="Imagen 1">
+                    <div class="card-body">
+                        <h5 class="card-title">España vs Grecia</h5>
+                        <p class="card-text">4 de enero 2025
+                            <br>Estadio Estadio Pierre Mauroy 
+                            <br>6 : 00 PM
+                        </p>
+                        <a href="pago.html" class="btn btn-primary">$350.000</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://elcomercio.pe/resizer/v2/C2TLCEYYJNGBFLEANLGPK6ZG7Q.jpg?auth=f3aa29c46787f8fd5ce7cfd4ec11b0e96ec3d3a0921b101664deae5a06f870e6&width=980&height=528&quality=75&smart=true" class="card-img-top" alt="Imagen 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Team USA vs Brasil </h5>
+                        <p class="card-text">25 de Diciembre 2024
+                            <br>Estadio Estadio Pierre Mauroy 
+                            <br>1 : 00 PM </p>
+                        <a href="pago.html" class="btn btn-primary">$400.000</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://img.olympics.com/images/image/private/t_s_16_9_g_auto/t_s_w960/f_auto/primary/f90idlenm3oodf1l1vck" class="card-img-top" alt="Imagen 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Francia vs Alemania</h5>
+                        <p class="card-text">9 de Noviembre 2024
+                            <br>Estadio  AccorHotels Arena
+                            <br>5 : 00 PM </p>
+                        <a href="pago.html" class="btn btn-primary">$456.200</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://img.olympics.com/images/image/private/t_s_16_9_g_auto/t_s_w960/f_auto/primary/eezujggk4pxdlg9sh72z" class="card-img-top" alt="Imagen 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Puerto Rico vs México</h5>
+                        <p class="card-text">27 de Noviembre 2024
+                            <br>Estadio José Miguel Agrelot Coliseum
+                            <br>10 : 00 PM </p>
+                        <a href="pago.html" class="btn btn-primary">$582.000</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://e.rpp-noticias.io/xlarge/2024/08/10/234223_1625020.webp" class="card-img-top" alt="Imagen 5">
+                    <div class="card-body">
+                        <h5 class="card-title">  Team USA vs Francia</h5>
+                        <p class="card-text">15 de Marzo 2025
+                            <br>Estadio Bercy Arena
+                            <br>4 : 20 PM </p>
+                        <a href="pago.html" class="btn btn-primary">$582.255</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 6 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://cdn.eldestapeweb.com/eldestape/082024/1722881027697.webp?cw=770&ch=440&extw=jpeg  " class="card-img-top" alt="Imagen 6">
+                    <div class="card-body">
+                        <h5 class="card-title">Dream Team USA vs Brasil</h5>
+                        <p class="card-text">11 de Abril 2025
+                            <br> Bercy Arena de París
+                            <br>7 : 20 PM </p>
+                        <a href="pago.html" class="btn btn-primary">$450.101</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 7 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://sportsmedia.games/wp-content/uploads/2024/07/Paris-2024-Brasil-vs-Alemania-%C2%BFDonde-y-a-que-hora-ver-hoy-el-partido-de-basquetbol-Sportsmedia-Mx-e1722362166347.jpeg" class="card-img-top" alt="Imagen 7">
+                    <div class="card-body">
+                        <h5 class="card-title">BRASIL VS ALEMANIA </h5>
+                        
+                            <p class="card-text">20 de Abril 2025
+                                <br>Decathlon Arena 
+                                <br>9 : 40 PM </p>
+                        <a href="pago.html" class="btn btn-primary">$333.333</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 8 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://img.olympics.com/images/image/private/t_s_pog_staticContent_hero_sm_2x/f_auto/primary/grzfvgz3oh7sjpuht2po" class="card-img-top" alt="Imagen 8">
+                    <div class="card-body">
+                        <h5 class="card-title">Argentina vs España</h5>
+                        <p class="card-text">20 de Abril 2025
+                            <br>España 
+                            <br>8 : 40 PM </p>
+                        <a href="pago.html" class="btn btn-primary">$150.200</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <footer class="bg-dark text-white pt-5 pb-4">
+      <div class="container text-center text-md-start">
+          <div class="row">
+  
+              
+              <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                  <h6 class="text-uppercase fw-bold">Festival de Frecuencias</h6>
+                  <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px"/>
+                  <p>
+                      Ofrecemos las mejores vivencias sonoras que podrias experimentar en tu vida
+                  </p>
+              </div>
+  
+              <!-- Enlaces útiles -->
+              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                  <h6 class="text-uppercase fw-bold">En nuestra página</h6>
+                  <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px"/>
+                  <p><a href="index.html" class="text-white text-decoration-none">Inicio</a></p>
+                  <p><a href="#" class="text-white text-decoration-none">Eventos</a></p>
+                  <p><a href="iniciarsesion.html" class="text-white text-decoration-none">Iniciar sesión</a></p>
+                  <p><a href="#" class="text-white text-decoration-none">Contacto</a></p>
+              </div>
+  
+              <!-- Contacto -->
+              <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                  <h6 class="text-uppercase fw-bold">Contacto</h6>
+                  <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px"/>
+                  <p><i class="fas fa-home mr-3"></i> Rio negro, Colombia</p>
+                  <p><i class="fas fa-envelope mr-3"></i> Festivalfrecuencias@gmail.com</p>
+                  <p><i class="fas fa-phone mr-3"></i> 314 8113864</p>
+                  <p><i class="fas fa-print mr-3"></i> 311 3485801</p>
+              </div>
+  
+              <!-- Redes Sociales -->
+              <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                  <h6 class="text-uppercase fw-bold">Síguenos</h6>
+                  <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px"/>
+                  <div>
+                      <a href="" class="text-white me-4"><i class="fab fa-facebook-f"></i>Instagram</a>
+                      <a href="#" class="text-white me-4"><i class="fab fa-twitter"></i>Faceebook</a>
+                      <a href="#" class="text-white me-4"><i class="fab fa-instagram"></i>Twitter</a>
+
+                  </div>
+              </div>
+  
+          </div>
+      </div>
+      
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          © 2024 Festival de Frecuencias | Todos los derechos reservados.
+      </div>
+  </footer>
+
+
+
+
+
+    <!-- Bootstrap 5 JS y Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>
